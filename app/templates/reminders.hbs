@@ -1,9 +1,10 @@
-<h1>remeEMBER NINJA TURTLES RULES!</h1>
+<h1>remeEMBER</h1>
 
 {{#each model as |reminder|}}
-  <div class='reminder-item'>
-    <h3>{{reminder.title}}</h3>
-    <p>{{reminder.body}}</p>
+  <div>
+    {{#link-to 'reminders.reminder' reminder}}
+      <h3 class="reminder-item">{{reminder.title}}</h3>
+    {{/link-to}}
   </div>
 {{/each}}
 

@@ -1,17 +1,28 @@
-<div class="item-links">
-  <h1>remeEMBER</h1>
+<h1>remeEMBER</h1>
+  {{#if model}}
     {{#each model as |reminder|}}
-      <div>
-        {{#link-to 'reminders.reminder' reminder}}
-          <h3 class="reminder-item">{{reminder.title}}</h3>
-        {{/link-to}}
+      <div class="item-links">
+        <div>
+          {{#link-to 'reminders.reminder' reminder}}
+            <h3 class="reminder-item">{{reminder.title}}</h3>
+          {{/link-to}}
+        </div>
       </div>
     {{/each}}
-  </div>
-    {{#link-to 'reminders.new'}}
-      <button class="create-btn">
-        Create New Reminder
-      </button>
-    {{/link-to}}
+
+{{#link-to 'reminders.new'}}
+  <button class="create-btn">
+    Create New Reminder
+  </button>
+{{/link-to}}
+
+  {{else}}
+    <p>There are no reminders. Please make one!</p>
+      {{#link-to 'reminders.new'}}
+        <button class="create-btn">
+          Create New Reminder
+        </button>
+      {{/link-to}}
+    {{/if}}
 
 {{outlet}}

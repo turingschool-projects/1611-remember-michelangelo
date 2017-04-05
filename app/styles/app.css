@@ -3,6 +3,17 @@ body {
   text-align: center;
 }
 
+/*
+.item-links {
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  border-right: solid black;
+}
+
+.single-items {
+  margin-left: 55%;
+}*/
 .active {
   color:lime;
 }

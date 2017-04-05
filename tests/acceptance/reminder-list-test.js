@@ -29,3 +29,13 @@ test('clicking on an individual item', function(assert) {
     assert.equal(Ember.$('.reminder-item:first').text().trim(), Ember.$('.reminder-title').text().trim());
   });
 });
+
+test('if there are no reminders', function(assert) {
+  server.createList('reminder', 0);
+
+  visit('/reminders');
+
+  andThen(function() {
+    assert.equal(Ember.$('.reminder-item').length, 0);
+  });
+});

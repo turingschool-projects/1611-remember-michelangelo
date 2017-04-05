@@ -1,10 +1,5 @@
+//ROUTES
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(){
-    
-  }
-  //return hook
- // returns new reminder
- // ember.object
 });

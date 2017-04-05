@@ -1,11 +1,17 @@
-<h1>remeEMBER</h1>
-
-{{#each model as |reminder|}}
-  <div>
-    {{#link-to 'reminders.reminder' reminder}}
-      <h3 class="reminder-item">{{reminder.title}}</h3>
+<div class="item-links">
+  <h1>remeEMBER</h1>
+    {{#each model as |reminder|}}
+      <div>
+        {{#link-to 'reminders.reminder' reminder}}
+          <h3 class="reminder-item">{{reminder.title}}</h3>
+        {{/link-to}}
+      </div>
+    {{/each}}
+    {{#link-to 'reminders.new'}}
+      <button class="create-btn">
+        Create New Reminder
+      </button>
     {{/link-to}}
-  </div>
-{{/each}}
+</div>
 
 {{outlet}}

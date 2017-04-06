@@ -12,6 +12,7 @@ date: '',
       const reminder = this.getProperties('title', 'body', 'date');
       this.get('store').createRecord('reminder', reminder).save().then(() => {
         this.setProperties({title:'', body:'', date:''})
+        this.transitionToRoute('reminders')
       });
     }
   }

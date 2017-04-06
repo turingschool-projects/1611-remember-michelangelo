@@ -1,0 +1,9 @@
+<div class="single-items">
+  <p>{{model.date}}</p>
+  <p class="reminder-title">{{model.title}}</p>
+  <p>{{model.body}}</p>
+  {{#link-to 'reminders.reminder.edit'}}
+  <button class="edit-btn"> Edit</button>
+  {{/link-to}}
+  <button {{action 'removeReminder' model}} class="delete-btn">Delete</button>
+</div>

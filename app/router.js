@@ -11,7 +11,7 @@ Router.map(function() {
     this.route('reminder', {path: '/reminder/:id'}, function() {
       this.route('edit');
     });
-    this.route('new', {path: '/new'});
+    this.route('new');
   });
 });
 
